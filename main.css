@@ -10,16 +10,19 @@
   font-style: normal;
 }
 
-
+#main {
+  background: #fff;
+  padding: 5% 5%;
+}
+.icons {
+  gap: 1rem;
+}
 a:hover {
   box-shadow: 0 0 5px #333;
 }
 
 a {
   border: 1px solid #3c3d3e;
-}
-.fa-github {
-  color: #171515;
 }
 
 a,
@@ -39,6 +42,9 @@ i {
   font-size: 2rem;
   color: #3c3d3e;
 }
+.fa-github {
+  color: #171515;
+}
 .fa-envelope {
   color: #4c6ef5;
 }
@@ -50,20 +56,17 @@ i {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 300;
-  letter-spacing: 0.25em;
-  text-indent: 0.25em;
+  letter-spacing: 0.25rem;
+  text-indent: 0.25rem;
   text-transform: uppercase;
   text-align: center;
 }
 p {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
 }
-
-
-
 
 @media (prefers-color-scheme: light) {
   a:hover {
@@ -99,5 +102,17 @@ p {
   }
   .fa-github {
     color: #f0f6fc;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #main {
+    padding: 5% 0;
+  }
+  a {
+    border: none;
+  }
+  .icons {
+    gap: 0;
   }
 }
