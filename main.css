@@ -10,67 +10,16 @@
   font-style: normal;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-html {
-  height: -webkit-fill-available;
-}
 
 a:hover {
   box-shadow: 0 0 5px #333;
 }
-body {
-  background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
-}
-#main {
-  background: #fff;
-}
+
 a {
   border: 1px solid #3c3d3e;
 }
 .fa-github {
   color: #171515;
-}
-
-@media (prefers-color-scheme: light) {
-  a:hover {
-    box-shadow: 0 0 5px #333;
-  }
-  body {
-    background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
-  }
-  #main {
-    background: #fff;
-  }
-  a {
-    border: 1px solid #3c3d3e;
-  }
-  .fa-github {
-    color: #171515;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  a:hover {
-    box-shadow: 0 0 5px #fff;
-  }
-  body {
-    background-image: linear-gradient(to bottom left, #5a7e86, #997479);
-  }
-  #main {
-    background: #333;
-    color: #ffffff;
-  }
-  a {
-    border: 1px solid #7c7d80;
-  }
-  .fa-github {
-    color: #f0f6fc;
-  }
 }
 
 a,
@@ -112,38 +61,43 @@ p {
   font-size: 2em;
   font-weight: 600;
 }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+
+
+@media (prefers-color-scheme: light) {
+  a:hover {
+    box-shadow: 0 0 5px #333;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+  }
+  #main {
+    background: #fff;
+  }
+  a {
+    border: 1px solid #3c3d3e;
+  }
+  .fa-github {
+    color: #171515;
+  }
 }
 
-#main {
-  margin: 5em;
-  height: fit-content;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 5% 2.5%;
-  text-align: center;
-  filter: drop-shadow(0.5em 0.5em 0.3em rgba(0, 0, 0, 0.3));
-}
-
-img {
-  border-radius: 50%;
-  object-fit: contain;
-}
-
-.icons {
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1em;
+@media (prefers-color-scheme: dark) {
+  a:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #5a7e86, #997479);
+  }
+  #main {
+    background: #333;
+    color: #ffffff;
+  }
+  a {
+    border: 1px solid #7c7d80;
+  }
+  .fa-github {
+    color: #f0f6fc;
+  }
 }
