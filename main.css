@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.woff2")
+      format("woff2"),
+    url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+a:hover {
+  box-shadow: 0 0 5px #333;
+}
+body {
+  background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+}
+#main {
+  background: #fff;
+}
+a {
+  border: 1px solid #3c3d3e;
+}
+.fa-github {
+  color: #171515;
+}
+
+@media (prefers-color-scheme: light) {
+  a:hover {
+    box-shadow: 0 0 5px #333;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+  }
+  #main {
+    background: #fff;
+  }
+  a {
+    border: 1px solid #3c3d3e;
+  }
+  .fa-github {
+    color: #171515;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #5a7e86, #997479);
+  }
+  #main {
+    background: #333;
+    color: #ffffff;
+  }
+  a {
+    border: 1px solid #7c7d80;
+  }
+  .fa-github {
+    color: #f0f6fc;
+  }
+}
+
+a,
+a:visited {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+i {
+  font-size: 3em;
+  color: #3c3d3e;
+}
+.fa-envelope {
+  color: #4c6ef5;
+}
+.fa-quora {
+  color: #b92b27;
+}
+.fa-linkedin-in {
+  color: #0a66c2;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-indent: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-size: 2em;
+  font-weight: 600;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main {
+  margin: 1em;
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5em 10em;
+  text-align: center;
+  filter: drop-shadow(0.5em 0.5em 0.3em rgba(0, 0, 0, 0.3));
+}
+
+img {
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.icons {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
