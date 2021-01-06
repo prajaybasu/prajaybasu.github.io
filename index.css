@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+body {
+  background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+}
+
 #main {
   background: #fff;
   padding: 5% 5%;
