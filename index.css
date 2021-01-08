@@ -1,1 +1,138 @@
-@charset "UTF-8";@font-face{font-family: FontAwesome; src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.woff2) format("woff2"); font-weight: 400; font-style: normal;}body{background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);}#main{background: #fff; padding: 5% 5%;}.icons{gap: 1rem;}a:hover{box-shadow: 0 0 5px #333;}a{border: 1px solid #3c3d3e;}a,a:visited{width: 5rem; height: 5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 100%; vertical-align: middle; text-decoration: none;}.icon{font-size: 2rem; font-family: FontAwesome;}.icon-one{color: #4c6ef5; font-size: 2.5em;}.icon-two{color: #171515;}.icon-three{color: #0a66c2;}.icon-four{color: #b92b27;}h1{font-size: 3rem; font-weight: 300; letter-spacing: 0.25rem; text-indent: 0.25rem; text-transform: uppercase; text-align: center;}p{font-size: 2rem; font-weight: 600;}@media (prefers-color-scheme: light){a:hover{box-shadow: 0 0 5px #333;}body{background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);}#main{background: #fff;}a{border: 1px solid #3c3d3e;}.icon-two{color: #171515;}}@media (prefers-color-scheme: dark){a:hover{box-shadow: 0 0 5px #fff;}body{background-image: linear-gradient(to bottom left, #5a7e86, #997479);}#main{background: #333; color: #fff;}a{border: 1px solid #7c7d80;}.icon-two{color: #f0f6fc;}}@media only screen and (min-device-width: 320px) and (max-device-width: 480px){#main{padding: 5% 0;}a{border: none;}.icons{gap: 0;}}
+@charset "UTF-8";
+@font-face {
+  font-family: FontAwesome;
+  src: url("data:font/woff2;base64, d09GMgABAAAAAAxkAAoAAAAAFWwAAAwYAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAg0oKngyWSgsmAAE2AiQDRgQgBYMtB4FpG8kQIxH2erRSkv1FQjbHsG515lSmoq+sGKxjOscMnt82Lut6dNqv9ESxLcqzgjHBuHZZo+ByNhBcjiGN0egYXFI75rDSsa910jQM1xvpNtcbwzVs536tjlI6l7pslbDlEBZtHrDofr6oQgRSK7eCwxCz7B/tvpI2rw0+MVgBwe4JFcAOJaxuq2O1nJmiOSBsAxn27T2cu3lq1ABT/dXS2VKqMCkShItHmr3jM/n7tE2rHP3oFxeiqM2DEQgdRe2qdIvFeazBmb7YZqRFdcWCBZnpF3mengIo9B7xGKgAyBj5DQA8KoyIfwFH5AyRoEbg1hNG2ByWVfathQ/+H7/ciRqzjTBsu+FHmsrFqNBaiuwoshZBJcAnVkKrpOBlVj3kI4EC9f/j///DXHDu4bl3z02cO3ruE2WHsl85qLymfK58pfx4/uKl6OXObBZA+qiIWmco1Uf1Y/oB3V26nTo3HaMfonfRK+k+2k135lm0Ec0vQID/CSTUIFnzIbMyo6eAOlWqzs2mRmoBAQkUEJypMqYCE4rad60z0mKeVp9HGcwFlIGiaEuHwWTM1SCNprioIm8+re8ymw1GkwPlalEj5V9Nq1XTDcU8V1rDVJcycokwTIUCi4k+CoqBRAnlXFrMFBkIGQdjul7/VZ+ST3KJZUHfcMfAZegHRyVHqrYHduk9YQPSr1n12GzIhXSGxPmr0GTD4buWC9N0kwk2FXajNWUJAEJ5wdYgO//XKEgQSCKSS0dl9IQhpS7LtAFkxFRzg9BI51XBCMaZ2858YsRdqN9ajPus2QNG4ERmXH+WLKYD9DQZK80HRnuyL2Z8CLq5hpFMc/Peq3srB/LMnKwYIC2HxEhHJms7xgjFQC+Kgdyr1iME0Yi2n/R3ZadgMK10Rjk1UF6qERiRlmVdFbhPKy3d6PbpmYdo1HavOJWfYi+ByVNCsQxvcQYsew4Ra5awuURm+mAxqr5u99ehTXYXMJ2r2zRwo0oFl+fpI83GbM5PszeCGa09OezMK4jIUDzmHsfDZp7SxZqsmkrJxOaI/Cqh99PyutycNvcx/1m0tx1XfT5EsLj2FKloc8cJRr1RCzzhE7aiAlVXti0uly33sdy3hfod0N62tAul9/Q02Xgq7A6ZjMuIegk4K1OK5vbsdP7o6beL3zub3wopzJ8RI0PO5im2Xk6OFPWqjyH5j7T/aef/HruBPhT6ym/aCY65EYn5LJd12LBbs0lYnT31rj2ZcezgEeF0XwzPBHAFU0xPauWSaUCQZgmxczbszkMQW4JvNoPpDS4LBstNbp2562Tt05J9O73SX3gmq42UMDdNK2+v67k2ZqNqyr4Q25nXGZEfjBasbBa1Zc+tsbXNn+u2afxdKRNJkl/C1PWCD/LTJhEnjUdqGhMj7gCLy6CVNjMusWYHxHNw2g/2Vba0tjRPv8GhNOo98qSfLD0zq70qo4hyyTNRRE5eBKRzFsRZBpg4SwkUmG8UBhAmKomKh0YEmFWRvVgkthkINwVEdqUzA0vMAIww4M1gVq2gHucYWZG+kUe5KT81YXrwDqxXeas+2fT7bG0bZ/qDOWApNfk24/htxz2s48u3c3LdcriiMHJ6rxR4asBFGV+hsjdypbGo2K6gAjHl5S3sPRdVgD+65BmTJTw2uZKzI2EuBxYc29kasFZ7nWdh8FmzNdtLCWLRx+oiC8iLfYnSfFvI232x0f0b8M589OxC91LtVlEjIj8vavucmarfKT8Dq+NTBpvbc/U37SdYB/2kdal3y10gCbzMdG7S2iasZr4wrfQ19h8IYQWWYxz987afDFfYH0qgaC3JYkqN2Z8oimUpDjOYmG2YC6iAk+pDVPyFMtqHszrQYlCliVcCkaGIzGFJynVuLO+e8aO+GncVerD2+O4AxzG89Qqfci5M8Kt4ntEMdOyOTdaiB11Vrho/imH73sZ6XpBjGM+8yz6VuUaddRELQ7e25Uq7mRg3FBmKEK+gtMHgewNTnMhhksUiw/kEhvEJLhcOYo5iMKZCHEWNsCTL2DkssHb4Yuq2qSFf6uxZm00Op1JJY7O/vDJVyc/NuVEfMTJirSVv5AThMyXPuol7UeAJtBfIj52vJwISrdbeudAiyfRDxsmYo7iddrVe3u0R2KpOexVU/K29sVO0t1e/cfzEyna72Dn4avur3PhswiceDvJYa6QuxQchcvXxuvSpmwsP+V8iJT+emprckHod2hOieZnf4U/ATvxT1GAPHvA0+eejCUkMC8dRAnGURBML/S1o8BBAXsNnt/9OvL9hKepmTIIY/LDhkLWroFwSy0sjKYnfqrFf6cA+ky0LN1b4U1h0tXIOQHLx2oyg1RojjKJl7WoLbzQThEs7d3Y/R1LdjgfeBOgqloRbZDYW1u4YGdHTX1o73vrY+78dcldXX3JX0nsj3sVVGUMdukBDbdD4f2g92Ev3+MoGSgbCGg9xPJGebDiyRd6S860q8Y+f4sQTxD/S6PhqX9zFOULB4nIlzfwpVOY58OSGJ0Z3bniKiBNxbjG3dGdlZuSCwhaYI4K1u7mPEDog+3DJfkW59ItjxVNvNB2Yy2RmRvOTcVziz994519qBp5a4fjlkpJ+4sF0lfuJK5lLDkckdSMobpZ4Z407Uj3kpSs/KU+seYP175WOOGr61jyaUpnNqrgyZTZbCnniH+j0BeUkINrtu/ailKjabvwlKBfA/oePLGNj0hHbjRgfCl1QXn39kFsXjZq9MmYOEuFaswX3nUxfuSGq1s4VRYMeU3ypj1hjGRr65Ug0WoRTeja8OxAJMYFAzFfU2zOXzz1VZEz/IuBl/ZgNx0dGmEAqHSEOKH6pe8hq3R0/xC5Ga4gYAT534e+yPp/buLAw+7vEgt/9p6SlgDowgC/4d7/j3EdFb1heN2Jd0Z84+671hO3dmcTbiZl3H8Vof4lQJnCyLGP/hQtpcohdQ6whAlW/XALygsltsroMLuyq48qEEgHtVztYQfVu/P3sX4EMnSZdVYJGVAllMYXkBfxuBymoWAfcv3B6ssX13BCRxdnGUOHthYnEglVTP1VXn5T6JiYmIhvWnZ6UJHi0TGs3hwPbjIWZmXdnaONij2wrtclej3EfP5RXZOgzmZqiGzWjtLVDWrfXWGqMZamrowucy7479QY4KrIkcDic405HxEQnyOo4EgDjp04z6MgCAETfzxJMYXNYUD5fjeI63/uZGTHPtAJJr32nVW/LG2BZZ89khkR7fbol0Q057z/DW1+xvaY5qXk0LAU31Z05s6kuKIUfvp94S3U/E0/1hCVJdKbijKq22fI/a7zBoEY8MHxAI+5Apc3/DJf2zsqpd096eQ83+ZR3G2tIXApV3eSkzZ4YYq4JPEkxJJMa3mhC9xL3crxUd3/TCJ/oNl0QzE9F09HTHvs4Lv9u8TYwhhzUiXcQh98+JRCrkD2RttdbzibZhGSpTyYT0XhScDmRkBvQH5UhIYBsTH6P9uOpBuWKo5SKcoc6DgQEm1XUeD/5rMF9t/Xv91sb3PdolopWmxDocaa8qjJ/md+8yRwIC+k0Y2r16V5CmVaToqSFsDlg3lAWKPN7VcGwP3mkufHku2L4mVWbXF0l0TZSr8dqPA+3Ra/IEvg2wki7Z/q1zArDLRe0eRRA98y3Z74S+2RvZsepcTQOAFogJyiLLFfQOJFxc/ylSwVGvy9Ad2VQjJ4WqSTHi6aFFGRvontAz4xtJYAy2jxQBLRetQsKPKA/pC4fXgXtBH6MhqMnriQgVyl0JKghV4fACkYdBbnQoFNBMfB0IBMGVRJUTmwejBQ6EmgI6hAsgP2MonOP61RwC3zep4Z5BJrhK7Nr5cttWT/O7tuolG1uLe0sdUdl5nk4tVZ3lQ521Y5ps+pgE1gPO2A73A7rYC1sEgTVjsLiwTBsg37KtC+xFFhohlaxZieUTp64zm5DwVEIabTdMn09XVB6+FgtjNEL14GXBL/ZNmD5yoPAIAoQiqrphmlJ23E9X4zY3LIBQwVVPsl0+llZ9K91FA74MSHzPyQBBeq89qf2BCXYAadwETfl7eCR1vKniifmDOsd2rltAXZHBdo3AKOV3+tGGqxU2I4tilYI56oLn2MOTW5sq4UYDxsyNVupuJvONJgEAA==")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a:hover {
+  box-shadow: 0 0 5px #333;
+}
+a {
+  border: 1px solid #3c3d3e;
+}
+a,
+a:visited {
+  font-size: 2rem;
+  font-family: FontAwesome;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  vertical-align: middle;
+  text-decoration: none;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  text-indent: 0.25rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.main {
+  background: #fff;
+  padding: 5% 5%;
+  margin: 5rem;
+  height: 27rem;
+  width: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  filter: drop-shadow(0.5rem 0.5rem 0.3rem rgba(0, 0, 0, 0.3));
+}
+.profile {
+  height: 12.5rem;
+  width: 12.5rem;
+  border-radius: 50%;
+}
+.icons {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.icon-one {
+  color: #4c6ef5;
+  font-size: 2.5em;
+}
+.icon-two {
+  color: #171515;
+}
+.icon-three {
+  color: #0a66c2;
+}
+.icon-four {
+  color: #b92b27;
+}
+
+@media (prefers-color-scheme: light) {
+  a {
+    border: 1px solid #3c3d3e;
+  }
+  a:hover {
+    box-shadow: 0 0 5px #333;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #98d6e6, #b98b91);
+  }
+  .main {
+    background: #fff;
+  }
+  .icon-two {
+    color: #171515;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    border: 1px solid #7c7d80;
+  }
+  a:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+  body {
+    background-image: linear-gradient(to bottom left, #5a7e86, #997479);
+  }
+  .main {
+    background: #333;
+    color: #fff;
+  }
+  .icon-two {
+    color: #f0f6fc;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  a {
+    border: none;
+  }
+  .main {
+    padding: 5% 0;
+  }
+  .icons {
+    gap: 0;
+  }
+}
