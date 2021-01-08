@@ -44,18 +44,19 @@ a:visited {
   font-size: 2rem;
   font-family: "FontAwesome";
 }
-.github {
-  color: #171515;
-}
-.email {
+
+.icon-one {
   color: #4c6ef5;
   font-size: 2.5em;
 }
-.quora {
-  color: #b92b27;
+.icon-two {
+  color: #171515;
 }
-.linkedin {
+.icon-three {
   color: #0a66c2;
+}
+.icon-four {
+  color: #b92b27;
 }
 
 h1 {
